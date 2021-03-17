@@ -57,23 +57,23 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div className="UnitDiv">
           <label>TEX:</label>
-          <input type="text" id="TEX" value={val} onChange={handleChange}></input>
+          <input type="number" id="TEX" value={val} onChange={handleChange}></input>
         </div>
         <div className="UnitDiv">
           <label>DTEX:</label>
-          <input type="text" id="DTEX" value={val2} onChange={handleChange}></input>
+          <input type="number" id="DTEX" value={val2} onChange={handleChange}></input>
         </div>
         <div className="UnitDiv">
           <label>DENYE:</label>
-          <input type="text" id="DENYE" value={val3} onChange={handleChange}></input>
+          <input type="number" id="DENYE" value={val3} onChange={handleChange}></input>
         </div>
         <div className="UnitDiv">
           <label>NM:</label>
-          <input type="text" id="NM" value={val4} onChange={handleChange}></input>
+          <input type="number" id="NM" value={val4} onChange={handleChange}></input>
         </div>
         <div className="UnitDiv">
           <label>NE:</label>
-          <input type="text" id="NE" value={val5} onChange={handleChange}></input>
+          <input type="number" id="NE" value={val5} onChange={handleChange}></input>
         </div>
       </header>
     </div>
