@@ -1,5 +1,21 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+}
+
+.UnitDiv{
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  margin: 10px;
+}
+
+label{
+  width: 50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
 }
 
 .App-logo {
