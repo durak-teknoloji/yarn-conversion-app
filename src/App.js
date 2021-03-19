@@ -80,8 +80,8 @@ function App() {
         lis[i].parentElement.style.display = 'none';
     }
     if (filter === "") {
-      for (var i = 0; i < lis.length; i++) {
-        lis[i].parentElement.style.display = 'table-row';
+      for (var j = 0; j < lis.length; j++) {
+        lis[j].parentElement.style.display = 'table-row';
       }
     }
   }
