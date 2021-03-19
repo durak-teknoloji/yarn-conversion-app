@@ -1,10 +1,13 @@
 //import logo from './logo.svg';
-import logo from './logo.png';
+import logo from './amblem.png';
 import './App.css';
-import { useState } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
+import Tabletop from 'tabletop';
+
 
 function App() {
 
+  //CONVERSION TABLE
   const [val, setVal] = useState()
   const [val2, setVal2] = useState()
   const [val3, setVal3] = useState()
@@ -52,9 +55,41 @@ function App() {
     }
   }
 
+  //YARN TYPES TABLE
+  //GOOGLE SHEETS CONNECTION
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    Tabletop.init({
+      key: "1sQXI-ocD-huRSlOzTB0vt8QiYjXW71lHZpioDeQnokc",
+      simpleSheet: true
+    })
+      .then((data) => setData(data))
+      .catch((err) => console.warn(err));
+  }, []);
+
+  //TABLE FILTER
+  function fFilter() {
+    var filter = document.getElementById('filter1').value;
+    var lis = document.getElementsByName('c1');
+    for (var i = 0; i < lis.length; i++) {
+      var txt = lis[i].innerText;
+      if (txt === filter)
+        lis[i].parentElement.style.display = 'table-row';
+      else
+        lis[i].parentElement.style.display = 'none';
+    }
+    if (filter === "") {
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].parentElement.style.display = 'table-row';
+      }
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
+        <br></br>
         <img src={logo} className="App-logo" alt="logo" />
         <div className="UnitDiv">
           <label>TEX:</label>
@@ -76,6 +111,34 @@ function App() {
           <label>NE:</label>
           <input type="number" id="NE" value={val5} onChange={handleChange}></input>
         </div>
+        <br></br>
+        <table>
+          <tr>
+            <th>
+              <select id="filter1" onChange={fFilter}>
+                <option></option>
+                {data.map((item, i) => (
+                  <Fragment key={i}>
+                    <option>{item.C1}</option>
+                  </Fragment>
+                ))}
+              </select>
+            </th>
+          </tr>
+          {data.map((item, i) => (
+            <Fragment key={i}>
+              <tr name="row">
+                <td name="c1">{item.C1}</td>
+                <td>{item.C2}</td>
+                <td>{item.C3}</td>
+                <td>{item.C4}</td>
+                <td>{item.C5}</td>
+                <td>{item.C6}</td>
+                <td>{item.C7}</td>
+              </tr>
+            </Fragment>
+          ))}
+        </table>
       </header>
     </div>
   );
