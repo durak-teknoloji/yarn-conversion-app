@@ -21,6 +21,7 @@ label{
 .App-logo {
   height: 10vmin;
   pointer-events: none;
+  margin-top: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -61,8 +62,9 @@ input::-webkit-inner-spin-button {
 
 table{
   border-style: solid;
-  padding: 2px;
+  padding: 4px;
   margin-top: 10px;
+  margin: 5px;
   display:table;
 }
 

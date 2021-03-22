@@ -91,6 +91,7 @@ function App() {
       <header className="App-header">
         <br></br>
         <img src={logo} className="App-logo" alt="logo" />
+        <br></br>
         <div className="UnitDiv">
           <label>TEX:</label>
           <input type="number" id="TEX" value={val} onChange={handleChange}></input>
