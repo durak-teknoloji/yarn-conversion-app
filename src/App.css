@@ -41,6 +41,29 @@ label{
   color: white;
 }
 
+.btnDivLeft {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#yarnTableBtn {
+  display: unset;
+}
+
+#conversionBtn {
+  display: none;
+}
+
+#conversionDiv {
+  display: unset;
+}
+
+#yarnTableDiv {
+  display: none;
+}
+
 .App-link {
   color: #61dafb;
 }

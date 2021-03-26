@@ -86,60 +86,88 @@ function App() {
     }
   }
 
+  function fYarnTable() {
+    document.getElementById("conversionDiv").style.display = "none";
+    document.getElementById("yarnTableDiv").style.display = "unset";
+    document.getElementById("yarnTableBtn").style.display = "none";
+    document.getElementById("conversionBtn").style.display = "unset";
+  }
+
+  function fConversion() {
+    document.getElementById("yarnTableDiv").style.display = "none";
+    document.getElementById("conversionDiv").style.display = "unset";
+    document.getElementById("conversionBtn").style.display = "none";
+    document.getElementById("yarnTableBtn").style.display = "unset";
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <br></br>
+        <div className="btnDivLeft">
+          <input type="button" id="yarnTableBtn" value="İplik Tablosu" onClick={fYarnTable}/>
+          <input type="button" id="conversionBtn" value="Çevrim" onClick={fConversion}/>
+        </div>
+        <br></br>
         <img src={logo} className="App-logo" alt="logo" />
         <br></br>
-        <div className="UnitDiv">
-          <label>TEX:</label>
-          <input type="number" id="TEX" value={val} onChange={handleChange}></input>
+        <div id="conversionDiv">
+          <div className="UnitDiv">
+            <label>TEX:</label>
+            <input type="number" id="TEX" value={val} onChange={handleChange}></input>
+          </div>
+          <div className="UnitDiv">
+            <label>DTEX:</label>
+            <input type="number" id="DTEX" value={val2} onChange={handleChange}></input>
+          </div>
+          <div className="UnitDiv">
+            <label>DENYE:</label>
+            <input type="number" id="DENYE" value={val3} onChange={handleChange}></input>
+          </div>
+          <div className="UnitDiv">
+            <label>NM:</label>
+            <input type="number" id="NM" value={val4} onChange={handleChange}></input>
+          </div>
+          <div className="UnitDiv">
+            <label>NE:</label>
+            <input type="number" id="NE" value={val5} onChange={handleChange}></input>
+          </div>
         </div>
-        <div className="UnitDiv">
-          <label>DTEX:</label>
-          <input type="number" id="DTEX" value={val2} onChange={handleChange}></input>
+        <div id="yarnTableDiv">
+          <table>
+            <tr>
+              <th>
+                <select id="filter1" onChange={fFilter}>
+                  <option></option>
+                  {data.map((item, i) => (
+                    <Fragment key={i}>
+                      <option>{item.C8}</option>
+                    </Fragment>
+                  ))}
+                </select>
+              </th>
+              <th>Metraj</th>
+              <th>Uzunluk</th>
+              <th>Tex</th>
+              <th>Testttt</th>
+              <th>C6</th>
+              <th>C7</th>
+            </tr>
+            {data.map((item, i) => (
+              <Fragment key={i}>
+                <tr name="row">
+                  <td name="c1">{item.C1}</td>
+                  <td>{item.C2}</td>
+                  <td>{item.C3}</td>
+                  <td>{item.C4}</td>
+                  <td>{item.C5}</td>
+                  <td>{item.C6}</td>
+                  <td>{item.C7}</td>
+                </tr>
+              </Fragment>
+            ))}
+          </table>
         </div>
-        <div className="UnitDiv">
-          <label>DENYE:</label>
-          <input type="number" id="DENYE" value={val3} onChange={handleChange}></input>
-        </div>
-        <div className="UnitDiv">
-          <label>NM:</label>
-          <input type="number" id="NM" value={val4} onChange={handleChange}></input>
-        </div>
-        <div className="UnitDiv">
-          <label>NE:</label>
-          <input type="number" id="NE" value={val5} onChange={handleChange}></input>
-        </div>
-        <br></br>
-        <table>
-          <tr>
-            <th>
-              <select id="filter1" onChange={fFilter}>
-                <option></option>
-                {data.map((item, i) => (
-                  <Fragment key={i}>
-                    <option>{item.C1}</option>
-                  </Fragment>
-                ))}
-              </select>
-            </th>
-          </tr>
-          {data.map((item, i) => (
-            <Fragment key={i}>
-              <tr name="row">
-                <td name="c1">{item.C1}</td>
-                <td>{item.C2}</td>
-                <td>{item.C3}</td>
-                <td>{item.C4}</td>
-                <td>{item.C5}</td>
-                <td>{item.C6}</td>
-                <td>{item.C7}</td>
-              </tr>
-            </Fragment>
-          ))}
-        </table>
       </header>
     </div>
   );
