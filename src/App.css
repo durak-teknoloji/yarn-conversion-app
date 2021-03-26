@@ -85,9 +85,7 @@ input::-webkit-inner-spin-button {
 
 table{
   border-style: solid;
-  padding: 4px;
   margin-top: 10px;
-  margin: 5px;
   display:table;
 }
 

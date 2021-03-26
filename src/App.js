@@ -147,7 +147,7 @@ function App() {
                 </select>
               </th>
               <th>Metraj</th>
-              <th>Uzunluk</th>
+              <th>Uzunluk Uzunluk Uzunluk Uzunluk</th>
               <th>Tex</th>
               <th>Testttt</th>
               <th>C6</th>
