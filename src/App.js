@@ -74,13 +74,11 @@ function App() {
     var lis = document.getElementsByName('c1');
     for (var i = 0; i < lis.length; i++) {
       var txt = lis[i].innerText;
-      if (txt === filter)
-      {
+      if (txt === filter) {
         lis[i].parentElement.style.display = 'table-row';
         document.getElementById(txt).style.display = "unset";
       }
-      else
-      {
+      else {
         lis[i].parentElement.style.display = 'none';
         document.getElementById(txt).style.display = "none";
       }
@@ -111,8 +109,8 @@ function App() {
       <header className="App-header">
         <br></br>
         <div className="btnDivLeft">
-          <input type="button" id="yarnTableBtn" value="İplik Tablosu" onClick={fYarnTable}/>
-          <input type="button" id="conversionBtn" value="Çevrim" onClick={fConversion}/>
+          <input type="button" id="yarnTableBtn" value="İplik Tablosu" onClick={fYarnTable} />
+          <input type="button" id="conversionBtn" value="Çevrim" onClick={fConversion} />
         </div>
         <br></br>
         <img src={logo} className="App-logo" alt="logo" />
@@ -141,42 +139,47 @@ function App() {
         </div>
         <div id="yarnTableDiv">
           <table>
-            <tr>
-              <th>
-                <select id="filter1" onChange={fFilter}>
-                  <option></option>
-                  {data.map((item, i) => (
-                    <Fragment key={i}>
-                      {(() => {
-                      if (item.C8 !== "") {
-                        return(
-                          <option>{item.C8}</option>
-                        )
-                      }})()}
-                    </Fragment>
-                  ))}
-                </select>
-              </th>
-              <th>Metraj</th>
-              <th>Uzunluk Uzunluk Uzunluk Uzunluk</th>
-              <th>Tex</th>
-              <th>Testttt</th>
-              <th>C6</th>
-              <th>C7</th>
-            </tr>
-            {data.map((item, i) => (
-              <Fragment key={i}>
-                <tr name="row">
-                  <td name="c1">{item.C1}</td>
-                  <td>{item.C2}</td>
-                  <td>{item.C3}</td>
-                  <td>{item.C4}</td>
-                  <td>{item.C5}</td>
-                  <td>{item.C6}</td>
-                  <td>{item.C7}</td>
-                </tr>
-              </Fragment>
-            ))}
+            <thead>
+              <tr>
+                <th>
+                  <select id="filter1" onChange={fFilter}>
+                    <option></option>
+                    {data.map((item, i) => (
+                      <Fragment key={i}>
+                        {(() => {
+                          if (item.C8 !== "") {
+                            return (
+                              <option>{item.C8}</option>
+                            )
+                          }
+                        })()}
+                      </Fragment>
+                    ))}
+                  </select>
+                </th>
+                <th>Metraj</th>
+                <th>Uzunluk Uzunluk Uzunluk Uzunluk</th>
+                <th>Tex</th>
+                <th>Testttt</th>
+                <th>C6</th>
+                <th>C7</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((item, i) => (
+                <Fragment key={i}>
+                  <tr name="row">
+                    <td name="c1">{item.C1}</td>
+                    <td>{item.C2}</td>
+                    <td>{item.C3}</td>
+                    <td>{item.C4}</td>
+                    <td>{item.C5}</td>
+                    <td>{item.C6}</td>
+                    <td>{item.C7}</td>
+                  </tr>
+                </Fragment>
+              ))}
+            </tbody>
           </table>
           <div className="imgDivDiv">
             <div className="imgDiv">
@@ -184,10 +187,11 @@ function App() {
                 <Fragment key={i}>
                   {(() => {
                     if (item.C8 !== "") {
-                      return(
-                        <img className="productImg" id={item.C8} src={item.C9}></img>
+                      return (
+                        <img className="productImg" id={item.C8} src={item.C9} alt=""></img>
                       )
-                    }})()}
+                    }
+                  })()}
                 </Fragment>
               ))}
             </div>
