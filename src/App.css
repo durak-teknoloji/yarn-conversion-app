@@ -22,6 +22,7 @@ label{
   height: 10vmin;
   pointer-events: none;
   margin-top: 10px;
+  display: unset;
 }
 
 @media (prefers-reduced-motion: no-preference) {
