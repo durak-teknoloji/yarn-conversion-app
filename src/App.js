@@ -148,7 +148,7 @@ function App() {
                   {data.map((item, i) => (
                     <Fragment key={i}>
                       {(() => {
-                      if (item.C8 != "") {
+                      if (item.C8 !== "") {
                         return(
                           <option>{item.C8}</option>
                         )
@@ -183,7 +183,7 @@ function App() {
               {data.map((item, i) => (
                 <Fragment key={i}>
                   {(() => {
-                    if (item.C8 != "") {
+                    if (item.C8 !== "") {
                       return(
                         <img className="productImg" id={item.C8} src={item.C9}></img>
                       )
