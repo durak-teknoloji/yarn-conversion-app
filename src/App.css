@@ -102,3 +102,21 @@ td{
   font-style: normal;
   font-weight: lighter;
 }
+
+.imgDivDiv {
+  margin-top: 20px;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.productImg{
+  width: 200px;
+  border-radius: 10px;
+}
+
+img {
+  display: none;
+}

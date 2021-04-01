@@ -75,9 +75,15 @@ function App() {
     for (var i = 0; i < lis.length; i++) {
       var txt = lis[i].innerText;
       if (txt === filter)
+      {
         lis[i].parentElement.style.display = 'table-row';
+        document.getElementById(txt).style.display = "unset";
+      }
       else
+      {
         lis[i].parentElement.style.display = 'none';
+        document.getElementById(txt).style.display = "none";
+      }
     }
     if (filter === "") {
       for (var j = 0; j < lis.length; j++) {
@@ -141,7 +147,12 @@ function App() {
                   <option></option>
                   {data.map((item, i) => (
                     <Fragment key={i}>
-                      <option>{item.C8}</option>
+                      {(() => {
+                      if (item.C8 != "") {
+                        return(
+                          <option>{item.C8}</option>
+                        )
+                      }})()}
                     </Fragment>
                   ))}
                 </select>
@@ -167,6 +178,20 @@ function App() {
               </Fragment>
             ))}
           </table>
+          <div className="imgDivDiv">
+            <div className="imgDiv">
+              {data.map((item, i) => (
+                <Fragment key={i}>
+                  {(() => {
+                    if (item.C8 != "") {
+                      return(
+                        <img className="productImg" id={item.C8} src={item.C9}></img>
+                      )
+                    }})()}
+                </Fragment>
+              ))}
+            </div>
+          </div>
         </div>
       </header>
     </div>
