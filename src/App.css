@@ -95,6 +95,10 @@ table{
   justify-content: space-between;
 }
 
+th{
+  font-size: 16px;
+}
+
 td{
   border-style:ridge;
   border-width: 1px;

@@ -147,9 +147,9 @@ function App() {
                     {data.map((item, i) => (
                       <Fragment key={i}>
                         {(() => {
-                          if (item.C8 !== "") {
+                          if (item.L1 !== "") {
                             return (
-                              <option>{item.C8}</option>
+                              <option>{item.L1}</option>
                             )
                           }
                         })()}
@@ -157,12 +157,13 @@ function App() {
                     ))}
                   </select>
                 </th>
-                <th>Metraj</th>
-                <th>Uzunluk Uzunluk Uzunluk Uzunluk</th>
-                <th>Tex</th>
-                <th>Testttt</th>
-                <th>C6</th>
-                <th>C7</th>
+                <th>TKT No.</th>
+                <th>Metraj (Meter/Yrd)</th>
+                <th>Gramaj</th>
+                <th>Nominal Tex</th>
+                <th>Konik Tipi</th>
+                <th>Kutudaki Bobin Adedi</th>
+                <th>Kolideki Bobin Adedi</th>
               </tr>
             </thead>
             <tbody>
@@ -176,6 +177,7 @@ function App() {
                     <td>{item.C5}</td>
                     <td>{item.C6}</td>
                     <td>{item.C7}</td>
+                    <td>{item.C8}</td>
                   </tr>
                 </Fragment>
               ))}
@@ -186,9 +188,9 @@ function App() {
               {data.map((item, i) => (
                 <Fragment key={i}>
                   {(() => {
-                    if (item.C8 !== "") {
+                    if (item.L1 !== "" && item.L2 !== "") {
                       return (
-                        <img className="productImg" id={item.C8} src={item.C9} alt=""></img>
+                        <img className="productImg" id={item.L1} src={item.L2} alt=""></img>
                       )
                     }
                   })()}
