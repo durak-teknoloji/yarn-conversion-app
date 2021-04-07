@@ -158,12 +158,12 @@ function App() {
                   </select>
                 </th>
                 <th>TKT No.</th>
-                <th>Metraj (Meter/Yrd)</th>
+                <th>Metraj (Meter/ Yrd)</th>
                 <th>Gramaj</th>
                 <th>Nominal Tex</th>
                 <th>Konik Tipi</th>
-                <th>Kutudaki Bobin Adedi</th>
-                <th>Kolideki Bobin Adedi</th>
+                <th>Kutuda Bobin Adedi</th>
+                <th>Kolide Bobin Adedi</th>
               </tr>
             </thead>
             <tbody>

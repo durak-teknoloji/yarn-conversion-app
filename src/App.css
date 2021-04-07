@@ -63,6 +63,7 @@ label{
 
 #yarnTableDiv {
   display: none;
+  width: 100%;
 }
 
 .App-link {
@@ -88,6 +89,7 @@ table{
   border-style: solid;
   margin-top: 10px;
   display:table;
+  min-width: rem-calc(800);
 }
 
 .table-row{
@@ -96,14 +98,14 @@ table{
 }
 
 th{
-  font-size: 16px;
+  font-size: 12px;
 }
 
 td{
   border-style:ridge;
   border-width: 1px;
   padding: 2px;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: lighter;
 }
@@ -124,4 +126,8 @@ td{
 
 img {
   display: none;
+}
+
+option {
+  font-size: 10px;
 }
