@@ -50,19 +50,19 @@ label{
 }
 
 #yarnTableBtn {
-  display: unset;
+  display: none;
 }
 
 #conversionBtn {
-  display: none;
-}
-
-#conversionDiv {
   display: unset;
 }
 
-#yarnTableDiv {
+#conversionDiv {
   display: none;
+}
+
+#yarnTableDiv {
+  display: unset;
   width: 100%;
 }
 
