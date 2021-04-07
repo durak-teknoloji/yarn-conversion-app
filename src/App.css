@@ -88,8 +88,7 @@ input::-webkit-inner-spin-button {
 table{
   border-style: solid;
   margin-top: 10px;
-  display:table;
-  min-width: rem-calc(800);
+  display:none;
 }
 
 .table-row{
@@ -129,9 +128,13 @@ img {
 }
 
 select {
-  width: 90px;
+  width: 100%;
 }
 
 option {
   font-size: 10px;
+}
+
+.hideCol {
+  display: none;
 }

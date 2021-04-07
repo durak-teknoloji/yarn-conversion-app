@@ -72,6 +72,7 @@ function App() {
   function fFilter() {
     var filter = document.getElementById('filter1').value;
     var lis = document.getElementsByName('c1');
+    document.getElementById("myTable").style.display = 'table';
     for (var i = 0; i < lis.length; i++) {
       var txt = lis[i].innerText;
       if (txt === filter) {
@@ -87,6 +88,7 @@ function App() {
       for (var j = 0; j < lis.length; j++) {
         lis[j].parentElement.style.display = 'table-row';
       }
+      document.getElementById("myTable").style.display = 'none';
     }
   }
 
@@ -138,10 +140,6 @@ function App() {
           </div>
         </div>
         <div id="yarnTableDiv">
-          <table>
-            <thead>
-              <tr>
-                <th>
                   <select id="filter1" onChange={fFilter}>
                     <option></option>
                     {data.map((item, i) => (
@@ -156,6 +154,10 @@ function App() {
                       </Fragment>
                     ))}
                   </select>
+          <table id="myTable">
+            <thead>
+              <tr>
+                <th className="hideCol">
                 </th>
                 <th>TKT No.</th>
                 <th>Metraj (Meter/ Yrd)</th>
@@ -170,7 +172,7 @@ function App() {
               {data.map((item, i) => (
                 <Fragment key={i}>
                   <tr name="row">
-                    <td name="c1">{item.C1}</td>
+                    <td className="hideCol" name="c1">{item.C1}</td>
                     <td>{item.C2}</td>
                     <td>{item.C3}</td>
                     <td>{item.C4}</td>
