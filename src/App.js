@@ -160,10 +160,10 @@ function App() {
                 <th>TKT No.</th>
                 <th>Metraj (Meter/ Yrd)</th>
                 <th>Gramaj</th>
-                <th>Nominal Tex</th>
+                <th>Nom. Tex</th>
                 <th>Konik Tipi</th>
-                <th>Kutuda Bobin Adedi</th>
-                <th>Kolide Bobin Adedi</th>
+                <th>Kutu Bobin Adet</th>
+                <th>Koli Bobin Adet</th>
               </tr>
             </thead>
             <tbody>
