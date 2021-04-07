@@ -84,7 +84,7 @@ function App() {
         document.getElementById(txt).style.display = "none";
       }
     }
-    if (filter === "") {
+    if (filter === "- Ürün seçin -") {
       for (var j = 0; j < lis.length; j++) {
         lis[j].parentElement.style.display = 'table-row';
       }
@@ -107,7 +107,7 @@ function App() {
   }
 
   return (
-    
+
     <div className="App">
       <MetaTags>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -144,20 +144,20 @@ function App() {
           </div>
         </div>
         <div id="yarnTableDiv">
-                  <select id="filter1" onChange={fFilter}>
-                    <option></option>
-                    {data.map((item, i) => (
-                      <Fragment key={i}>
-                        {(() => {
-                          if (item.L1 !== "") {
-                            return (
-                              <option>{item.L1}</option>
-                            )
-                          }
-                        })()}
-                      </Fragment>
-                    ))}
-                  </select>
+          <select id="filter1" onChange={fFilter}>
+            <option>- Ürün seçin -</option>
+            {data.map((item, i) => (
+              <Fragment key={i}>
+                {(() => {
+                  if (item.L1 !== "") {
+                    return (
+                      <option>{item.L1}</option>
+                    )
+                  }
+                })()}
+              </Fragment>
+            ))}
+          </select>
           <table id="myTable">
             <thead>
               <tr>
