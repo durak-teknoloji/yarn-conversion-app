@@ -51,10 +51,26 @@ label{
 
 #yarnTableBtn {
   display: none;
+  padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
 }
 
 #conversionBtn {
   display: unset;
+  padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
 }
 
 #conversionDiv {
@@ -101,7 +117,7 @@ th{
 }
 
 tr:hover {
-  background-color: blue;
+  background-color: #5A5E66;
 }
 
 td{
