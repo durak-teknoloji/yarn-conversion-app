@@ -24,6 +24,21 @@ label{
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -42,16 +57,9 @@ label{
   align-items: flex-start;
 }
 
-#yarnTableBtn {
+#conversionDiv {
   display: none;
-  padding: 6px 12px;
-    font-size: 12px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    border-radius: 15px;
+  width: min-content;
 }
 
 #conversionBtn {
@@ -64,11 +72,6 @@ label{
     outline: none;
     border: none;
     border-radius: 15px;
-}
-
-#conversionDiv {
-  display: none;
-  width: min-content;
 }
 
 .UnitDivDiv {
@@ -95,23 +98,24 @@ label{
   width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#yarnTableBtn {
+  display: none;
+  padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select {
+  width: 100%;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+option {
+  font-size: 10px;
 }
 
 table{
@@ -142,6 +146,10 @@ td{
   font-weight: lighter;
 }
 
+.hideCol {
+  display: none;
+}
+
 .imgDivDiv {
   margin-top: 20px;
 }
@@ -151,17 +159,17 @@ td{
   justify-content: center;
 }
 
-.productImg{
-  width: 200px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
 .imgAndDefinitionDiv {
   width: 100%;
   display: none;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.productImg{
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .definitionTextarea {
@@ -185,15 +193,3 @@ textarea:focus{
   outline: 0;
 }
 
-
-select {
-  width: 100%;
-}
-
-option {
-  font-size: 10px;
-}
-
-.hideCol {
-  display: none;
-}
