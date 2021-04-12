@@ -143,9 +143,18 @@ function App() {
             <input type="number" id="NE" value={val5} onChange={handleChange}></input>
           </div>
           <br></br>
-          <label>
-             TEX: Uluslararası sistemdir. Her türlü iplik için kullanılabilir. 1000 metre ipliğin kaç gram geldiğinin ifadesidir.
-          </label>
+          <p className="pConversion">
+            <b>TEX:</b> Uluslararası sistemdir. Her türlü iplik için kullanılabilir. 1000 metre ipliğin kaç gram geldiğinin ifadesidir.
+            <br></br>
+            <br></br>
+            Örnek; 1000 m iplik...50 gr ise...50 Tex
+            <br></br>
+            
+          </p>
+          <textarea readOnly={true} className="definitionTextarea">
+            
+
+          </textarea>
         </div>
         <div id="yarnTableDiv">
           <select id="filter1" onChange={fFilter}>
