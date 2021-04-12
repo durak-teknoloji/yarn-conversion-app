@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import logo from './amblem.png';
 import './App.css';
-import React, { useState, useEffect, Fragment, Component } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Tabletop from 'tabletop';
 import MetaTags from 'react-meta-tags';
 
