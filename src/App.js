@@ -101,7 +101,7 @@ function App() {
 
   function fConversion() {
     document.getElementById("yarnTableDiv").style.display = "none";
-    document.getElementById("conversionDiv").style.display = "unset";
+    document.getElementById("conversionDiv").style.display = "block";
     document.getElementById("conversionBtn").style.display = "none";
     document.getElementById("yarnTableBtn").style.display = "unset";
   }
@@ -122,25 +122,27 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <br></br>
         <div id="conversionDiv">
-          <div className="UnitDiv">
-            <label>TEX:</label>
-            <input type="number" id="TEX" value={val} onChange={handleChange}></input>
-          </div>
-          <div className="UnitDiv">
-            <label>DTEX:</label>
-            <input type="number" id="DTEX" value={val2} onChange={handleChange}></input>
-          </div>
-          <div className="UnitDiv">
-            <label>DENYE:</label>
-            <input type="number" id="DENYE" value={val3} onChange={handleChange}></input>
-          </div>
-          <div className="UnitDiv">
-            <label>NM:</label>
-            <input type="number" id="NM" value={val4} onChange={handleChange}></input>
-          </div>
-          <div className="UnitDiv">
-            <label>NE:</label>
-            <input type="number" id="NE" value={val5} onChange={handleChange}></input>
+          <div className="UnitDivDiv">
+            <div className="UnitDiv">
+              <label>TEX:</label>
+              <input type="number" id="TEX" value={val} onChange={handleChange}></input>
+            </div>
+            <div className="UnitDiv">
+              <label>DTEX:</label>
+              <input type="number" id="DTEX" value={val2} onChange={handleChange}></input>
+            </div>
+            <div className="UnitDiv">
+              <label>DENYE:</label>
+              <input type="number" id="DENYE" value={val3} onChange={handleChange}></input>
+            </div>
+            <div className="UnitDiv">
+              <label>NM:</label>
+              <input type="number" id="NM" value={val4} onChange={handleChange}></input>
+            </div>
+            <div className="UnitDiv">
+              <label>NE:</label>
+              <input type="number" id="NE" value={val5} onChange={handleChange}></input>
+            </div>
           </div>
           <br></br>
           <p className="pConversion">
@@ -149,12 +151,29 @@ function App() {
             <br></br>
             Örnek; 1000 m iplik...50 gr ise...50 Tex
             <br></br>
-            
+            <br></br>
+            <b>DTEX:</b> Her türlü iplik için kullanılabilir. 10000 metre ipliğin kaç gram geldiğinin ifadesidir.
+            <br></br>
+            <br></br>
+            Örnek; 1000 m iplik...500 gr ise...500 Dtex
+            <br></br>
+            <br></br>
+            <b>DENYE:</b> Filament ipliklerin ve liflerin numaralandırmasında kullanılır. 9000 metre iplikteki gramların sayısını belirtir.
+            <br></br>
+            <br></br>
+            Örnek; 9000 m iplik...200 gr ise...200 Denye
+            <br></br>
+            <br></br>
+            <b>NM:</b> Bir gram ağırlığındaki ipliğin kaç metre olduğunun ifadesidir.
+            <br></br>
+            <br></br>
+            Örnek; Nm20...1 gramı 20 m olan iplik
+            <br></br>
+            <br></br>
+            <b>NE:</b> Pamuk ipliklerinin numaralandırılmasında kullanılır, 1 libre iplikteki 840 yardaların sayısıdır.
+            <br></br>
+            <br></br>
           </p>
-          <textarea readOnly={true} className="definitionTextarea">
-            
-
-          </textarea>
         </div>
         <div id="yarnTableDiv">
           <select id="filter1" onChange={fFilter}>
