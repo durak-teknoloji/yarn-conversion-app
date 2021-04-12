@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import logo from './amblem.png';
 import './App.css';
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment, Component } from 'react';
 import Tabletop from 'tabletop';
 import MetaTags from 'react-meta-tags';
 
@@ -58,7 +58,7 @@ function App() {
   //YARN TYPES TABLE
   //GOOGLE SHEETS CONNECTION
   const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     Tabletop.init({
       key: "1sQXI-ocD-huRSlOzTB0vt8QiYjXW71lHZpioDeQnokc",
@@ -77,7 +77,7 @@ function App() {
       var txt = lis[i].innerText;
       if (txt === filter) {
         lis[i].parentElement.style.display = 'table-row';
-        document.getElementById(txt).style.display = "unset";
+        document.getElementById(txt).style.display = "flex";
       }
       else {
         lis[i].parentElement.style.display = 'none';
@@ -142,6 +142,10 @@ function App() {
             <label>NE:</label>
             <input type="number" id="NE" value={val5} onChange={handleChange}></input>
           </div>
+          <br></br>
+          <label>
+             TEX: Uluslararası sistemdir. Her türlü iplik için kullanılabilir. 1000 metre ipliğin kaç gram geldiğinin ifadesidir.
+          </label>
         </div>
         <div id="yarnTableDiv">
           <select id="filter1" onChange={fFilter}>
@@ -196,7 +200,13 @@ function App() {
                   {(() => {
                     if (item.L1 !== "" && item.L2 !== "") {
                       return (
-                        <img className="productImg" id={item.L1} src={item.L2} alt=""></img>
+                        <div id={item.L1} className="imgAndDefinitionDiv">
+                          <img className="productImg" src={item.L2} alt=""></img>
+                          <br></br>
+                          <textarea value={item.L3} readOnly={true} className="definitionTextarea">
+
+                          </textarea>
+                        </div>
                       )
                     }
                   })()}

@@ -141,10 +141,31 @@ td{
 .productImg{
   width: 200px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-img {
+.imgAndDefinitionDiv {
+  width: 100%;
   display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.definitionTextarea {
+  background-color: #282c34;
+  color: white;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: lighter;
+  width: 100%;
+  min-height:200px;
+  border: none;
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+textarea {
+  resize: none;
 }
 
 select {
